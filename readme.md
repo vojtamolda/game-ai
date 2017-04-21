@@ -1,6 +1,17 @@
 # Python & Qt Games Written for Fun :D
 
 
+## Game of Life - `life.py`
+Simple celular automata with a fancy history fading visualization.
+
+__How to play__: Run the game and watch.
+
+__Details__: [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+
+<img src="screenshots/life-mac.png" alt="Game of Life MacOS" width="31%">
+<img src="screenshots/life-lnx.png" alt="Game of Life Ubuntu" width="30%">
+<img src="screenshots/life-win.png" alt="Game of Life Ubuntu" width="30%">
+
 ## Tetris - `tetris.py`
 Yet another clone of the greatest game of all time. Peppered up with fancy tetrimino bouncing animation.
 
@@ -71,9 +82,8 @@ __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 ## Requirements
 - [Python 3](https://www.python.org/downloads/)
-- [PyQt5](https://riverbankcomputing.com/software/pyqt/download5) (May also work with [PySide](http://www.pyside.org/)
-  or [PyQt4](https://riverbankcomputing.com/software/pyqt/download), but wasn't tested)
+- [PyQt5](https://riverbankcomputing.com/software/pyqt/download5) (May also work with [PySide](http://www.pyside.org/), but wasn't tested)
+- [Numpy](http://www.numpy.org) (Only for `life.py`)
 
 
-
-This work is licensed under the [MIT License](https://opensource.org/licenses/MIT) © 2016.
+This work is licensed under the [MIT License](https://opensource.org/licenses/MIT) © 2017.
