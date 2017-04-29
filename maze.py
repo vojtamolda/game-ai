@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.QtCore import Qt, QSize, QPoint, QPropertyAnimation, QEasingCurve, pyqtProperty
+from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
+from PyQt5.QtGui import QPainter, QPen, QPalette
 import random
 import sys
 

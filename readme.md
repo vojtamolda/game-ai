@@ -8,9 +8,9 @@ __How to play__: Run the game and watch.
 
 __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
-<img src="screenshots/life-mac.png" alt="Game of Life MacOS" width="31%">
-<img src="screenshots/life-lnx.png" alt="Game of Life Ubuntu" width="30%">
-<img src="screenshots/life-win.png" alt="Game of Life Ubuntu" width="30%">
+<img src="screenshots/life-mac.png" alt="Game of Life MacOS" width="31%"> <img src="screenshots/life-lnx.png" alt="Game of Life Ubuntu" width="30%"> <img src="screenshots/life-win.png" alt="Game of Life Windows" width="30%">
+
+
 
 ## Tetris - `tetris.py`
 Yet another clone of the greatest game of all time. Peppered up with fancy tetrimino bouncing animation.
@@ -19,9 +19,7 @@ __How to play__: Form full rows and don't top out!
 
 __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Tetris)
 
-<img src="screenshots/tetris-mac.png" alt="Tetris MacOS" width="30%">
-<img src="screenshots/tetris-lnx.png" alt="Tetris Ubuntu" width="31%">
-<img src="screenshots/tetris-win.png" alt="Tetris Windows" width="30%">
+<img src="screenshots/tetris-mac.png" alt="Tetris MacOS" width="30%"> <img src="screenshots/tetris-lnx.png" alt="Tetris Ubuntu" width="31%"> <img src="screenshots/tetris-win.png" alt="Tetris Windows" width="30%">
 
 
 
@@ -33,9 +31,7 @@ __How to play__: Form a straight line out of four dots!
 
 __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four)
 
-<img src="screenshots/fourplay-mac.png" alt="Connect Four MacOS" width="30%">
-<img src="screenshots/fourplay-lnx.png" alt="Connect Four Ubuntu" width="32%">
-<img src="screenshots/fourplay-win.png" alt="Connect Four Windows" width="30%">
+<img src="screenshots/fourplay-mac.png" alt="Connect Four MacOS" width="30%"> <img src="screenshots/fourplay-lnx.png" alt="Connect Four Ubuntu" width="32%"> <img src="screenshots/fourplay-win.png" alt="Connect Four Windows" width="30%">
 
 
 
@@ -47,9 +43,7 @@ __How to play__: Get the ball to the end of the maze!
 
 __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Maze)
 
-<img src="screenshots/maze-mac.png" alt="Maze MacOS" width="30%">
-<img src="screenshots/maze-lnx.png" alt="Maze Ubuntu" width="30%">
-<img src="screenshots/maze-win.png" alt="Maze Windows" width="30%">
+<img src="screenshots/maze-mac.png" alt="Maze MacOS" width="30%"> <img src="screenshots/maze-lnx.png" alt="Maze Ubuntu" width="30%"> <img src="screenshots/maze-win.png" alt="Maze Windows" width="30%">
 
 
 
@@ -60,9 +54,7 @@ __How to play__: Just don't blow up!
 
 __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Minesweeper)
 
-<img src="screenshots/minesweeper-mac.png" alt="Minesweeper MacOS" width="30%">
-<img src="screenshots/minesweeper-lnx.png" alt="Minesweeper Ubuntu" width="30%">
-<img src="screenshots/minesweeper-win.png" alt="Minesweeper Windows" width="30%">
+<img src="screenshots/minesweeper-mac.png" alt="Minesweeper MacOS" width="30%"> <img src="screenshots/minesweeper-lnx.png" alt="Minesweeper Ubuntu" width="30%"> <img src="screenshots/minesweeper-win.png" alt="Minesweeper Windows" width="30%">
 
 
 
@@ -74,9 +66,7 @@ __How to play__: Get three ◯s or ☓s in a row!
 
 __Details__: [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
-<img src="screenshots/tictactoe-mac.png" alt="Tic-Tac-Toe MacOS" width="20%">
-<img src="screenshots/tictactoe-lnx.png" alt="Tic-Tac-Toe Ubuntu" width="20%">
-<img src="screenshots/tictactoe-win.png" alt="Tic-Tac-Toe Windows" width="20%">
+<img src="screenshots/tictactoe-mac.png" alt="Tic-Tac-Toe MacOS" width="20%"> <img src="screenshots/tictactoe-lnx.png" alt="Tic-Tac-Toe Ubuntu" width="20%"> <img src="screenshots/tictactoe-win.png" alt="Tic-Tac-Toe Windows" width="20%">
 
 
 

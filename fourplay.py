@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QMessageBox, QSizePolicy
+from PyQt5.QtGui import QPainter, QBrush, QPen, QPalette
+from PyQt5.QtCore import Qt, QPoint, QSize
 import unittest
 import random
 import sys
@@ -42,7 +42,7 @@ class FourPlay:
 
         def notify(self, notify=False):
             if self.delegate is not None and notify is True:
-                self.delegate.moveEvent(self)
+                self.delegate.updateEvent(self)
 
         def neighbor(self, fourPlay, location=None):
             diffRow, diffCol = location[0], location[1]

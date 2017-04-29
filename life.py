@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication, QWidget, QGraphicsScene, QGraphicsView, QGridLayout, QFrame
+from PyQt5.QtCore import Qt, QSize, QTimer
+from PyQt5.QtGui import QImage, QPixmap
 import numpy as np
 import sys
 

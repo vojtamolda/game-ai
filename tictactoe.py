@@ -1,6 +1,5 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QMessageBox, QSizePolicy
+from PyQt5.QtCore import Qt, QSize
 import unittest
 import sys
 
@@ -27,7 +26,7 @@ class TicTacToe:
 
         def notify(self):
             if self.delegate is not None:
-                self.delegate.moveEvent(self)
+                self.delegate.updateEvent(self)
 
         def score(self, board, player):
             def completeRow(board, player, row):

@@ -1,6 +1,5 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QGridLayout, QSizePolicy
+from PyQt5.QtCore import Qt, QSize
 import random
 import sys
 
@@ -42,7 +41,7 @@ class MineSweeper:
 
         def notify(self):
             if self.delegate is not None:
-                self.delegate.moveEvent(self)
+                self.delegate.updateEvent(self)
 
         def neighbors(self, mineSweeper):
             for diffRow, diffCol in [(+1, -1), (+1, 0), (+1, +1),

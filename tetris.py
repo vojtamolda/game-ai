@@ -1,7 +1,8 @@
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-
+from PyQt5.QtCore import Qt, QTimer, QSize, QPointF, QRectF, QPropertyAnimation, QEasingCurve, \
+                         QSequentialAnimationGroup, QAbstractAnimation
+from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QMessageBox, QGraphicsScene, \
+                            QGraphicsView, QGraphicsObject, QGridLayout
+from PyQt5.QtGui import QPainter, QPen, QBrush, QColor, QTransform
 import random
 import sys
 
@@ -416,6 +417,8 @@ class QTetris(QWidget):
             super(QTetris.QTetriview, self).__init__()
             self.setTransform(QTransform().rotate(+90).scale(+1, -1))
             self.setMinimumSize(100, 200)
+            self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+            self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
             self.setRenderHints(QPainter.Antialiasing)
             self.setFrameStyle(QFrame.NoFrame)
             self.setMouseTracking(True)
@@ -433,7 +436,8 @@ class QTetris(QWidget):
 
     def initUI(self):
         self.setLayout(QGridLayout())
-        self.layout().setSpacing(10)
+        self.layout().setSpacing(0)
+        self.layout().setContentsMargins(0, 0, 0, 0)
         self.scene = QTetris.QTetriscene(self.tetris)
         self.view = QTetris.QTetriview(self.scene)
         self.layout().addWidget(self.view)
