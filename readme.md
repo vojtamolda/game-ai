@@ -1,6 +1,18 @@
 # Python & Qt Games Written for Fun :D
 
 
+## Reinforcement Learning - `learning.py`
+Implementation of value iteration and policy iteration reinforcement learning algorithms that search for the optimal
+policy. The game is a simple deterministic implementation of an abstract Markov Decision Process interface.
+
+__How to play__: Type `L` to move left or `R` to move right and hit enter.
+
+__Details__: [Wikipedia](https://en.wikipedia.org/wiki/Markov_decision_process) [Wikipedia](https://en.wikipedia.org/wiki/Bellman_equation)
+
+<img src="screenshots/learning.png" alt="Reinforcement Learning" width="60%">
+
+
+
 ## Game of Life - `life.py`
 Gray-Scott reaction diffusion system and a simple cellular automaton with a fancy history fading visualization bundled
 in one compact application.
