@@ -1,12 +1,13 @@
 
-# Python & Qt Games Written for Fun :D
+# Games and AIs :)
 
 
 ## Sheriff Chase - [`sheriff/`](sheriff/)
-Implementation of value iteration and policy iteration reinforcement learning algorithms that search for the optimal
-policy. The game is a simple deterministic implementation of an abstract Markov Decision Process interface.
+Implementation of value iteration, policy iteration and Q learning algorithms that search for the optimal
+policy. The game is a simple deterministic implementation of an OpenAI gym environment extended to Markov
+Decision Process.
 
-<img src="sheriff/sheriff.png" alt="Sheriff" width="60%">
+<img src="sheriff/screenshot.png" alt="Sheriff Chase" width="60%">
 
 
 
