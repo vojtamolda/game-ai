@@ -11,15 +11,11 @@ Decision Process.
 
 
 
-## Game of Life - `life.py`
+## Game of Life - [`life/`](life/)
 Gray-Scott reaction diffusion system and a simple cellular automaton with a fancy history fading visualization bundled
 in one compact application.
 
-__How to play__: Select a game from the combo box and watch.
-
-__Details__: [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) [Wikipedia](https://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system)
-
-<img src="screenshots/life-mac.png" alt="Game of Life MacOS" width="30%"> <img src="screenshots/life-lnx.png" alt="Game of Life Ubuntu" width="32%"> <img src="screenshots/life-win.png" alt="Game of Life Windows" width="30%">
+<img src="life/screenshot-mac.png" alt="Game of Life (MacOS)" width="30%">
 
 
 
