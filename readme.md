@@ -19,14 +19,10 @@ in one compact application.
 
 
 
-## Tetris - `tetris.py`
+## Tetris - [`tetris/`](tetris/)
 Yet another clone of the greatest game of all time. Peppered up with fancy tetrimino bouncing animation.
 
-__How to play__: Form full rows and don't top out!
-
-__Details__: [Wikipedia](https://en.wikipedia.org/wiki/Tetris)
-
-<img src="screenshots/tetris-mac.png" alt="Tetris MacOS" width="30%"> <img src="screenshots/tetris-lnx.png" alt="Tetris Ubuntu" width="31%"> <img src="screenshots/tetris-win.png" alt="Tetris Windows" width="30%">
+<img src="tetris/screenshot-mac.png" alt="Tetris (MacOS)" width="30%">
 
 
 
