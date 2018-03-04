@@ -49,22 +49,17 @@ Clone of the only good software produced by a certain Seattle company...
 
 
 
-## Tic-Tac-Toe - `tictactoe.py`
-Oldie but goodie 3 by 3 noughts against crosses. Peppered up with a simple but never-losing AI. Good luck trying to
-beat it!
+## Tic-Tac-Toe - [`tictactoe/`](tictactoe/)
+Oldie but goodie 3 by 3 noughts against crosses. Peppered up with a simple AI. Good luck trying to beat it ;)
 
-__How to play__: Get three ◯s or ☓s in a row!
-
-__Details__: [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
-
-<img src="screenshots/tictactoe-mac.png" alt="Tic-Tac-Toe MacOS" width="20%"> <img src="screenshots/tictactoe-lnx.png" alt="Tic-Tac-Toe Ubuntu" width="20%"> <img src="screenshots/tictactoe-win.png" alt="Tic-Tac-Toe Windows" width="20%">
+<img src="tictactoe/screenshot-mac.png" alt="Tic-Tac-Toe (MacOS)" width="20%">
 
 
 
 ## Requirements
 - [Python 3.6](https://www.python.org/downloads/)
 - [PyQt5](https://riverbankcomputing.com/software/pyqt/download5) (May also work with [PySide](http://www.pyside.org/), but wasn't tested)
-- [Numpy](http://www.numpy.org) (Only for `life.py`)
+- [Numpy](http://www.numpy.org)
 
 
 This work is licensed under the [MIT License](https://opensource.org/licenses/MIT) © 2017.
