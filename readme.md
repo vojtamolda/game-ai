@@ -26,15 +26,11 @@ Yet another clone of the greatest game of all time. Peppered up with fancy tetri
 
 
 
-## Fourplay - `fourplay.py`
-Logical game for two with a quite-hard (but not impossible) to beat AI. The algorithm uses a version of
-[depth-first-search](https://en.wikipedia.org/wiki/Depth-first_search) which does branch pruning of obviously wrong choices for speed-up. The AI looks 8 moves ahead.
+## Fourplay - [`fourplay/`](fourplay/)
+Logical game for two with a quite-hard (but not impossible) to beat AI. One algorithm uses depth first search with
+branch pruning of obviously wrong choices for speed-up and looks 8 moves ahead.
 
-__How to play__: Form a straight line out of four dots!
-
-__Details__: [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four)
-
-<img src="screenshots/fourplay-mac.png" alt="Connect Four MacOS" width="30%"> <img src="screenshots/fourplay-lnx.png" alt="Connect Four Ubuntu" width="32%"> <img src="screenshots/fourplay-win.png" alt="Connect Four Windows" width="30%">
+<img src="fourplay/screenshot-mac.png" alt="Fourplay (MacOS)" width="30%">
 
 
 
