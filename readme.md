@@ -2,6 +2,14 @@
 # Games and AIs :)
 
 
+## Tic-Tac-Toe - [`tictactoe/`](tictactoe/)
+Oldie but goodie 3 by 3 noughts against crosses with 4 different built-in AIs. Good luck trying to beat them ;)
+Check out the `?` button the visualizes the current game graph as seen by the AI algorithm.
+
+<img src="tictactoe/screenshot-ui.png" alt="Tic-Tac-Toe (MacOS)" width="30%">
+
+
+
 ## Sheriff Chase - [`sheriff/`](sheriff/)
 Implementation of value iteration, policy iteration and Q learning algorithms that search for the optimal
 policy. The game is a simple deterministic implementation of an OpenAI gym environment extended to Markov
@@ -46,13 +54,6 @@ the maze is always hard to get to. Also check out the fancy ball animations :)
 Clone of the only good software produced by a certain Seattle company...
 
 <img src="minesweeper/screenshot-mac.png" alt="Minesweeper (MacOS)" width="30%">
-
-
-
-## Tic-Tac-Toe - [`tictactoe/`](tictactoe/)
-Oldie but goodie 3 by 3 noughts against crosses. Peppered up with a simple AI. Good luck trying to beat it ;)
-
-<img src="tictactoe/screenshot-mac.png" alt="Tic-Tac-Toe (MacOS)" width="20%">
 
 
 
