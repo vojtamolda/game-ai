@@ -58,7 +58,10 @@ def value_iteration(mdp, max_iter=100):
                 transition, reward = mdp.transition(observation, action)
                 if optimal_value <= value[observation]:
                     optimal_value, optimal_reward = value[transition], reward
-            value[observation] = optimal_reward + mdp.discount_factor * optimal_value
+            if optimal_reward == 0:
+                value[observation] = optimal_reward + mdp.discount_factor * optimal_value
+            else:
+                value[observation] = optimal_reward
 
     policy = extract_policy(mdp, value)
     return policy
@@ -91,7 +94,7 @@ def policy_iteration(mdp, max_iter=10):
     return policy
 
 
-def q_learning(env, learning_rate=0.2, exploration_rate=0.3, max_episodes=100, discount_factor=0.9):
+def q_learning(env, learning_rate=0.5, exploration_rate=0.3, max_episodes=200, discount_factor=0.9):
     """ Find and return the optimal policy for the OpenAI Env.
     The function uses the following version of the Q learning algorithm:
         0. Choose a random action with probability exploration_rate and otherwise pick best known action from Q.
@@ -114,9 +117,12 @@ def q_learning(env, learning_rate=0.2, exploration_rate=0.3, max_episodes=100, d
             else:
                 action = np.argmax(Q[observation, :])
             transition, reward, done, info = env.step(action)
-            Q[observation, action] *= (1 - learning_rate)
-            Q[observation, action] += learning_rate * (reward + discount_factor * np.max(Q[transition, :]))
-            observation = transition
+            if not done:
+                Q[observation, action] *= (1 - learning_rate)
+                Q[observation, action] += learning_rate * (reward + discount_factor * np.max(Q[transition, :]))
+                observation = transition
+            else:
+                Q[observation, action] = reward
 
     policy = np.argmax(Q, axis=1)
     return policy
