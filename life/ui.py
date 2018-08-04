@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import QWidget, QComboBox, QGraphicsScene, QGraphicsView, QVBoxLayout, QFrame, QSizePolicy
-from PyQt5.QtCore import Qt, QSize, QTimer
-from PyQt5.QtGui import QImage, QPixmap, QResizeEvent
+from PySide2.QtWidgets import QWidget, QComboBox, QGraphicsScene, QGraphicsView, QVBoxLayout, QFrame, QSizePolicy
+from PySide2.QtCore import Qt, QSize, QTimer
+from PySide2.QtGui import QImage, QPixmap, QResizeEvent
 import random
 
 from life import GameOfLife, GrayScottDiffusion
@@ -33,7 +33,7 @@ class QGameOfLife(QWidget):
         self.layout().setContentsMargins(0, 0, 0, 0)
 
         self.comboBox = QComboBox()
-        self.comboBox.addItems(QGameOfLife.Games.keys())
+        self.comboBox.addItems([*QGameOfLife.Games.keys()])
         self.comboBox.currentTextChanged.connect(self.select)
         self.layout().addWidget(self.comboBox)
 
@@ -49,7 +49,7 @@ class QGameOfLife(QWidget):
         self.timer = QTimer()
         self.timer.setInterval(10)
         self.timer.timeout.connect(self.tick)
-        initialGame = random.choice(list(QGameOfLife.Games.keys()))
+        initialGame = random.choice([*QGameOfLife.Games.keys()])
         self.select(initialGame)
         self.view.fitInView(self.item, Qt.KeepAspectRatioByExpanding)
         self.comboBox.setCurrentText(initialGame)
