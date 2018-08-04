@@ -1,7 +1,7 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QComboBox, QGridLayout, QMessageBox, \
-                            QSizePolicy, QVBoxLayout
-from PyQt5.QtGui import QPainter, QBrush, QPen, QPalette, QPaintEvent
-from PyQt5.QtCore import Qt, QPoint, QSize, QEvent
+from PySide2.QtWidgets import QApplication, QWidget, QPushButton, QComboBox, QGridLayout, QMessageBox, \
+                              QSizePolicy, QVBoxLayout
+from PySide2.QtGui import QPainter, QBrush, QPen, QPalette, QPaintEvent
+from PySide2.QtCore import Qt, QPoint, QSize, QEvent
 
 from fourplay import FourPlay
 from ai import DepthFirstSearchAI
@@ -32,9 +32,9 @@ class QFourPlay(QWidget):
             self.update()
 
         def clickEvent(self, disc: FourPlay.Disc):
-            self.leaveEvent(QEvent.None_)
+            self.leaveEvent(None)
             self.qFourPlay.round(disc)
-            self.enterEvent(QEvent.None_)
+            self.enterEvent(None)
 
         def enterEvent(self, event: QEvent):
             if self.playable is True:
@@ -109,14 +109,14 @@ class QFourPlay(QWidget):
         discGridLayout.setSpacing(4)
         aiComboBox = QComboBox(self)
         aiComboBox.addItems([self.tr(ai) for ai in self.AIs])
-        aiComboBox.currentTextChanged.connect(self.selectAI)
+        aiComboBox.currentTextChanged.connect(lambda: self.selectAI())
         layout.addWidget(aiComboBox)
         layout.addLayout(discGridLayout)
 
         for disc in self.fourPlay:
             qDisc = QFourPlay.QDiscButton(self)
             discGridLayout.addWidget(qDisc, disc.row, disc.column)
-            qDisc.clicked.connect(lambda _, qDisc=qDisc, disc=disc: qDisc.clickEvent(disc))
+            qDisc.clicked.connect(lambda qDisc=qDisc, disc=disc: qDisc.clickEvent(disc))
             qDisc.marked(disc)
             disc.delegate = qDisc
 
