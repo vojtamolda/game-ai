@@ -1,9 +1,9 @@
-from PyQt5.QtCore import Qt, QTimer, QSize, QPointF, QRectF, QPropertyAnimation, QEasingCurve, \
-                         QParallelAnimationGroup, QAbstractAnimation
-from PyQt5.QtWidgets import QWidget, QFrame, QMessageBox, QGraphicsScene, QGraphicsView, \
+from PySide2.QtCore import Qt, QTimer, QSize, QPointF, QRectF, QPropertyAnimation, QEasingCurve, \
+                           QParallelAnimationGroup, QAbstractAnimation
+from PySide2.QtWidgets import QWidget, QFrame, QMessageBox, QGraphicsScene, QGraphicsView, \
                             QGraphicsObject, QGridLayout, QStyleOptionGraphicsItem, \
                             QGraphicsSceneMouseEvent, QGraphicsSceneWheelEvent
-from PyQt5.QtGui import QPainter, QPen, QBrush, QColor, QTransform, QResizeEvent, QKeyEvent
+from PySide2.QtGui import QPainter, QPen, QBrush, QColor, QTransform, QResizeEvent, QKeyEvent
 from typing import Union
 
 from tetris import Tetris
@@ -191,9 +191,9 @@ class QTetris(QWidget):
     def initGame(self):
         self.tetris = Tetris()
         self.tetris.delegate = self
-        self.timer = QTimer()
+        self.timer = QTimer(self)
         self.timer.setInterval(350)
-        self.timer.timeout.connect(self.tetris.tick)
+        self.timer.timeout.connect(lambda: self.tetris.tick())
 
     def initUI(self):
         self.setLayout(QGridLayout())

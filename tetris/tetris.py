@@ -246,10 +246,10 @@ class Tetris(dict):
 
 
 if __name__ == '__main__':
-    from PyQt5.QtWidgets import QApplication
+    from PySide2.QtWidgets import QApplication
     import sys
     import ui
 
     application = QApplication(sys.argv)
     qTetris = ui.QTetris()
-    sys.exit(application.exec())
+    sys.exit(application.exec_())
