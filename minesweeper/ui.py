@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import QWidget, QPushButton, QMessageBox, QGridLayout, QSizePolicy
-from PyQt5.QtGui import QResizeEvent
-from PyQt5.QtCore import Qt, QSize
+from PySide2.QtWidgets import QWidget, QPushButton, QMessageBox, QGridLayout, QSizePolicy
+from PySide2.QtGui import QResizeEvent
+from PySide2.QtCore import Qt, QSize
 
 from minesweeper import MineSweeper
 
@@ -8,12 +8,12 @@ from minesweeper import MineSweeper
 class QMineSweeper(QWidget):
 
     class QTile(QPushButton):
-        def __init__(self, minesweeper: 'QMineSweeper', tile: MineSweeper.Tile):
+        def __init__(self, mineSweeper: 'QMineSweeper', tile: MineSweeper.Tile):
             super(QMineSweeper.QTile, self).__init__()
             self.setFocusPolicy(Qt.NoFocus)
             self.setContextMenuPolicy(Qt.CustomContextMenu)
             self.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-            self.mineSweeper = minesweeper
+            self.mineSweeper = mineSweeper
             self.marked = False
             self.tile = tile
 
@@ -22,6 +22,7 @@ class QMineSweeper(QWidget):
                 return
             self.tile.reveal()
             self.mineSweeper.score()
+            self.repaint()
 
         def rightClick(self):
             self.marked = not self.marked
@@ -39,7 +40,7 @@ class QMineSweeper(QWidget):
             self.setText(text)
 
         def sizeHint(self) -> QSize:
-            return QSize(35, 35)
+            return QSize(40, 40)
 
     def __init__(self, size: int):
         super(QMineSweeper, self).__init__()
@@ -51,14 +52,14 @@ class QMineSweeper(QWidget):
     def initUI(self):
         self.setWindowTitle(self.tr("Minesweeper"))
         layout = QGridLayout()
-        layout.setSpacing(11)
+        layout.setSpacing(5)
         self.setLayout(layout)
 
         for tile in self.mineSweeper:
             qTile = QMineSweeper.QTile(self, tile)
             layout.addWidget(qTile, tile.row, tile.column)
-            qTile.clicked.connect(lambda _, qTile=qTile: qTile.leftClick())
-            qTile.customContextMenuRequested.connect(lambda _, qTile=qTile: qTile.rightClick())
+            qTile.clicked.connect(qTile.leftClick)
+            qTile.customContextMenuRequested.connect(qTile.rightClick)
             tile.delegate = qTile
 
     def score(self):
