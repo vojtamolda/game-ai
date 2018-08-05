@@ -1,6 +1,6 @@
-from PyQt5.QtCore import Qt, QSize, QPoint, QPropertyAnimation, QEasingCurve, pyqtProperty
-from PyQt5.QtGui import QPainter, QPen, QPalette, QPaintEvent, QMouseEvent, QResizeEvent
-from PyQt5.QtWidgets import QWidget, QMessageBox
+from PySide2.QtCore import Qt, QSize, QPoint, Property, QPropertyAnimation, QEasingCurve
+from PySide2.QtGui import QPainter, QPen, QPalette, QPaintEvent, QMouseEvent, QResizeEvent
+from PySide2.QtWidgets import QWidget, QMessageBox
 import random
 
 
@@ -50,14 +50,14 @@ class QMaze(QWidget):
         self.initUI()
         self.show()
 
-    @pyqtProperty(QPoint)
-    def player(self) -> QPoint:
+    def getPlayer(self) -> QPoint:
         return self._player
 
-    @player.setter
-    def player(self, point: QPoint):
+    def setPlayer(self, point: QPoint):
         self._player = point
         self.update()
+
+    player = Property(QPoint, getPlayer, setPlayer)
 
     def initMaze(self):
         self.nodes = {}
@@ -108,7 +108,7 @@ class QMaze(QWidget):
         direction = closestNode.row - self.playerNode.row, closestNode.column - self.playerNode.column
         crawlNode = self.playerNode.crawl(direction)
 
-        self.animation = QPropertyAnimation(self, b'player')
+        self.animation = QPropertyAnimation(self, b"player", self)
         if len(crawlNode.links) > 2:
             self.animation.setEasingCurve(QEasingCurve.OutBack);
         else:
@@ -190,9 +190,9 @@ class QMaze(QWidget):
 
 
 if __name__ == "__main__":
-    from PyQt5.QtWidgets import QApplication
+    from PySide2.QtWidgets import QApplication
     import sys
 
     application = QApplication(sys.argv)
     qMaze = QMaze(10)
-    sys.exit(application.exec())
+    sys.exit(application.exec_())
