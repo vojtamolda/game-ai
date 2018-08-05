@@ -57,8 +57,8 @@ Oldie but goodie 3 by 3 noughts against crosses. Peppered up with a simple AI. G
 
 
 ## Requirements
-- [Python 3.6](https://www.python.org/downloads/)
-- [PyQt5](https://riverbankcomputing.com/software/pyqt/download5) (May also work with [PySide](http://www.pyside.org/), but wasn't tested)
+- [Python 3](https://www.python.org/downloads/)
+- [PySide2](http://www.pyside.org/)
 - [Numpy](http://www.numpy.org)
 
 
