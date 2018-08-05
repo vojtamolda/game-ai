@@ -1,7 +1,7 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QMessageBox, QSizePolicy, QVBoxLayout, \
-                            QComboBox
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtGui import QResizeEvent
+from PySide2.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QMessageBox, QSizePolicy, QVBoxLayout, \
+                              QComboBox
+from PySide2.QtCore import Qt, QSize
+from PySide2.QtGui import QResizeEvent
 
 from tictactoe import TicTacToe
 from ai import DepthFirstSearchAI
@@ -12,18 +12,20 @@ class QTicTacToe(QWidget):
     class QTileButton(QPushButton):
         SymbolMap = {'-': " ", 'O': "◯", 'X': "☓"}
 
-        def __init__(self, parent):
+        def __init__(self, parent, tile):
             super(QTicTacToe.QTileButton, self).__init__(parent)
+            self.tile = tile
             self.setFocusPolicy(Qt.NoFocus)
             self.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
             self.setContextMenuPolicy(Qt.CustomContextMenu)
 
-        def clickEvent(self, tile: TicTacToe.Tile):
-            self.parent().round(tile)
+        def clickEvent(self):
+            self.parent().round(self.tile)
+            self.repaint()
 
-        def marked(self, tile: TicTacToe.Tile):
-            self.setEnabled(tile.player is None)
-            self.setText(self.SymbolMap[str(tile)])
+        def marked(self):
+            self.setEnabled(self.tile.player is None)
+            self.setText(self.SymbolMap[str(self.tile)])
             self.update()
 
         def resizeEvent(self, resizeEvent: QResizeEvent):
@@ -70,9 +72,9 @@ class QTicTacToe(QWidget):
         layout.addLayout(gridLayout)
 
         for tile in self.ticTacToe:
-            button = QTicTacToe.QTileButton(self)
+            button = QTicTacToe.QTileButton(self, tile)
             gridLayout.addWidget(button, tile.row, tile.column)
-            button.clicked.connect(lambda _, button=button, tile=tile: button.clickEvent(tile))
+            button.clicked.connect(button.clickEvent)
             tile.delegate = button
 
     def round(self, tile: TicTacToe.Tile):

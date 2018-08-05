@@ -30,7 +30,7 @@ class TicTacToe(dict):
 
         def notify(self):
             if self.delegate is not None:
-                self.delegate.marked(self)
+                self.delegate.marked()
 
     class Player:
         def __init__(self, symbol: str, tictactoe: 'TicTacToe'=None):
@@ -147,10 +147,10 @@ class TicTacToe(dict):
 
 
 if __name__ == "__main__":
-    from PyQt5.QtWidgets import QApplication
+    from PySide2.QtWidgets import QApplication
     import sys
     import ui
 
     application = QApplication(sys.argv)
     qTicTacToe = ui.QTicTacToe()
-    sys.exit(application.exec())
+    sys.exit(application.exec_())
